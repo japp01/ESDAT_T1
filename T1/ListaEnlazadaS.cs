@@ -123,7 +123,7 @@ namespace T1
             //agregar dato segunda lista cuando indice es par
             temp = l.Primero;
             NodoS temp2 = segunda.Primero;
-            while (temp != null)
+            while (temp != null && temp2 != null)
             {
                 NodoS nuevo = new NodoS(temp2.Dato);
 
@@ -132,6 +132,7 @@ namespace T1
                 temp.Siguiente = temp2;
                 
                 temp = temp.Siguiente;
+                if (temp2.Siguiente != null) temp2 = temp2.Siguiente;
             }
 
             return l;
