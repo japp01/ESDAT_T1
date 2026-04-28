@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|c:\\users\\upn\\source\\repos\\esdat_t1\\t1\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\nodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:nodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\listaenlazadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:listaenlazadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\listaenlazadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:listaenlazadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|c:\\users\\upn\\source\\repos\\esdat_t1\\t1\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\nodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:nodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -38,23 +38,25 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T16:21:46.698Z"
+              "WhenOpened": "2026-04-28T16:21:46.698Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ListaEnlazadaS.cs",
               "DocumentMoniker": "C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\ListaEnlazadaS.cs",
               "RelativeDocumentMoniker": "ListaEnlazadaS.cs",
               "ToolTip": "C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\ListaEnlazadaS.cs",
               "RelativeToolTip": "ListaEnlazadaS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAcwFEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T16:24:32.389Z"
+              "WhenOpened": "2026-04-28T16:24:32.389Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "NodoS.cs",
               "DocumentMoniker": "C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\NodoS.cs",
               "RelativeDocumentMoniker": "NodoS.cs",
@@ -66,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Carro.cs",
               "DocumentMoniker": "C:\\Users\\UPN\\source\\repos\\ESDAT_T1\\T1\\Carro.cs",
               "RelativeDocumentMoniker": "Carro.cs",

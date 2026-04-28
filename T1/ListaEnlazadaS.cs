@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace T1
     {
         public NodoS Primero {  get; set; }
         public NodoS Ultimo { get; set; }
+        private int cantidad;
 
         public void AgregaDosCarros(string marca1, int puertas1, double ccmotor1, 
                                     string marca2, int puertas2, double ccmotor2)
@@ -23,6 +25,7 @@ namespace T1
                 Ultimo = nodoFin;
                 Primero.Siguiente = nodoFin;
                 Ultimo.Anterior = nodoIni;
+
             }
             else 
             {
@@ -33,7 +36,9 @@ namespace T1
                 Ultimo.Siguiente = nodoFin;
                 nodoFin.Anterior = Ultimo;
                 Ultimo = nodoFin;
-            }            
+            } 
+            
+            cantidad += 2;
         }
 
         public ListaEnlazadaS ListaSegunPuerta(int min, int max)
@@ -86,21 +91,52 @@ namespace T1
                 Ultimo = null;
                 Primero = null;
             }
+            cantidad--;
         }
 
         public ListaEnlazadaS MezclaParImpar(ListaEnlazadaS segunda)
         {
             ListaEnlazadaS l = new ListaEnlazadaS();
-            NodoS temp1 = Primero;
-            NodoS temp2 = l.Primero;
+            NodoS temp = Primero;
 
-            while (temp1 != null)
+            //agrega lista inicial
+            while (temp != null)
             {
+                NodoS nuevo = new NodoS(temp.Dato);                
 
+                if(l.Primero == null)
+                {
+                    l.Primero = nuevo;
+                    l.Ultimo = nuevo;
+                }
+                else
+                {
+                    l.Ultimo.Siguiente = nuevo;
+                    nuevo.Anterior = Ultimo;
+
+                }
+                l.cantidad++;
+
+                temp = temp.Siguiente;
+            }
+
+            //agregar dato segunda lista cuando indice es par
+            temp = l.Primero;
+            NodoS temp2 = segunda.Primero;
+            while (temp != null)
+            {
+                NodoS nuevo = new NodoS(temp2.Dato);
+
+                temp2.Anterior = temp;
+                temp2.Siguiente = temp.Siguiente;
+                temp.Siguiente = temp2;
+                
+                temp = temp.Siguiente;
             }
 
             return l;
         }
+
 
         public override string ToString()
         {
