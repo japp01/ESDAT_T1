@@ -1,0 +1,8 @@
+C:\Users\UPN\source\repos\ESDAT_T1\T1\bin\Debug\T1.exe.config
+C:\Users\UPN\source\repos\ESDAT_T1\T1\bin\Debug\T1.exe
+C:\Users\UPN\source\repos\ESDAT_T1\T1\bin\Debug\T1.pdb
+C:\Users\UPN\source\repos\ESDAT_T1\T1\obj\Debug\T1.csproj.AssemblyReference.cache
+C:\Users\UPN\source\repos\ESDAT_T1\T1\obj\Debug\T1.csproj.CoreCompileInputs.cache
+C:\Users\UPN\source\repos\ESDAT_T1\T1\obj\Debug\T1.exe
+C:\Users\UPN\source\repos\ESDAT_T1\T1\obj\Debug\T1.pdb
+C:\Users\UPN\source\repos\ESDAT_T1\T1\obj\Debug\T1.exe.config
