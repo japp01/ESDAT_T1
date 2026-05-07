@@ -17,13 +17,26 @@ namespace T1
             listaCar.AgregaDosCarros("Honda", 2, 100, "BYD", 4, 600);
 
             Console.WriteLine(listaCar.ToString());
-            Console.WriteLine();
 
-            ListaEnlazadaS newLista = listaCar.ListaSegunPuerta(1, 2);
+            ListaEnlazadaS newLista = new ListaEnlazadaS();
+            newLista.AgregaFin(new Carro("text", 5, 1000));
+            newLista.AgregaFin(new Carro("text", 5, 2000));
+            newLista.AgregaFin(new Carro("text", 5, 3000));
+            newLista.AgregaFin(new Carro("text", 5, 4000));
+            newLista.AgregaFin(new Carro("text", 5, 5000));
+            newLista.AgregaFin(new Carro("text", 5, 6000));
+            newLista.AgregaFin(new Carro("text", 5, 7000));
+            newLista.AgregaFin(new Carro("text", 5, 7000));
+            newLista.AgregaFin(new Carro("text", 5, 7000));
+            newLista.AgregaFin(new Carro("text", 5, 7000));
+
             Console.WriteLine(newLista.ToString());
 
-            listaCar.QuitaPenultimoCarro();
-            Console.WriteLine(listaCar.ToString());
+            ListaEnlazadaS mezcla = listaCar.MezclaParImpar(newLista);
+            Console.WriteLine(mezcla.ToString());
+            Console.WriteLine(mezcla.cantidad);
+            Console.WriteLine(newLista.cantidad);
+
         }
     }
 }

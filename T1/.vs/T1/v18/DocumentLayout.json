@@ -1,0 +1,94 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|c:\\users\\guestu\\documents\\code\\esdat_t1\\t1\\listaenlazadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:listaenlazadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|c:\\users\\guestu\\documents\\code\\esdat_t1\\t1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\nodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA86A1AA-A497-4C6C-8B60-6FBAC1030CA3}|T1.csproj|solutionrelative:nodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Carro.cs",
+              "DocumentMoniker": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\Carro.cs",
+              "RelativeDocumentMoniker": "Carro.cs",
+              "ToolTip": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\Carro.cs",
+              "RelativeToolTip": "Carro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T23:38:29.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListaEnlazadaS.cs",
+              "DocumentMoniker": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\ListaEnlazadaS.cs",
+              "RelativeDocumentMoniker": "ListaEnlazadaS.cs",
+              "ToolTip": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\ListaEnlazadaS.cs",
+              "RelativeToolTip": "ListaEnlazadaS.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T23:38:29.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NodoS.cs",
+              "DocumentMoniker": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\NodoS.cs",
+              "RelativeDocumentMoniker": "NodoS.cs",
+              "ToolTip": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\NodoS.cs",
+              "RelativeToolTip": "NodoS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T23:38:29.651Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\guestu\\Documents\\code\\ESDAT_T1\\T1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T23:38:29.12Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

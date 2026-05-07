@@ -5,149 +5,120 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace T1
-{
-    internal class ListaEnlazadaS
-    {
-        public NodoS Primero {  get; set; }
+namespace T1 {
+    internal class ListaEnlazadaS {
+        public NodoS Primero { get; set; }
         public NodoS Ultimo { get; set; }
-        private int cantidad;
+        public int cantidad;
 
-        public void AgregaDosCarros(string marca1, int puertas1, double ccmotor1, 
-                                    string marca2, int puertas2, double ccmotor2)
-        {
-            NodoS nodoIni = new NodoS(new Carro(marca1, puertas1, ccmotor1));
-            NodoS nodoFin = new NodoS(new Carro(marca2, puertas2, ccmotor2));
-
-            if(Primero == null)
-            {
-                Primero = nodoIni;
-                Ultimo = nodoFin;
-                Primero.Siguiente = nodoFin;
-                Ultimo.Anterior = nodoIni;
-
-            }
-            else 
-            {
-                nodoIni.Siguiente = Primero;
-                Primero.Anterior = nodoIni;
-                Primero = nodoIni;
-
-                Ultimo.Siguiente = nodoFin;
-                nodoFin.Anterior = Ultimo;
-                Ultimo = nodoFin;
-            } 
+        public void AgregaDosCarros(string marca1, int puertas1, double ccmotor1,
+                                    string marca2, int puertas2, double ccmotor2) {
             
-            cantidad += 2;
+            AgregaIni(new Carro(marca1, puertas1, ccmotor1));
+            AgregaFin(new Carro(marca2, puertas2, ccmotor2));
         }
 
-        public ListaEnlazadaS ListaSegunPuerta(int min, int max)
-        {
+        public ListaEnlazadaS ListaSegunPuerta(int min, int max) {
             ListaEnlazadaS l = new ListaEnlazadaS();
             NodoS temp = Primero;
 
-            while (temp != null)
-            {
-                if(temp.Dato.Puertas >= min && temp.Dato.Puertas <= max)
-                {
-                    NodoS nuevo = new NodoS(temp.Dato);
-
-                    if (l.Primero == null)
-                    {
-                        l.Primero = nuevo;
-                        l.Ultimo = nuevo;
-                    }
-                    else
-                    {
-                        nuevo.Siguiente = l.Primero;
-                        l.Primero.Anterior = nuevo;
-                        l.Primero = nuevo;
-                    }
-                }                    
-
+            while (temp != null) {
+                if (temp.Dato.Puertas >= min && temp.Dato.Puertas <= max) {
+                    l.AgregaFin(temp.Dato);
+                }
                 temp = temp.Siguiente;
             }
-
             return l;
         }
 
-        public void QuitaPenultimoCarro()
-        {
-            if (Ultimo.Anterior != null)
-            {
-                if(Ultimo.Anterior.Anterior == null)
-                {
-                    Ultimo.Anterior = null;
-                    Primero = Ultimo;
-                } 
-                else
-                {
-                    Ultimo.Anterior = Ultimo.Anterior.Anterior;
-                    Ultimo.Anterior.Siguiente = Ultimo;
-                }
-            }
-            else
-            {
+        public void QuitaPenultimoCarro() {
+
+            if (cantidad == 2) {
+                Ultimo.Anterior = null;
+                Primero = Ultimo;
+                cantidad--;
+            } else if (cantidad > 2) {
+                Ultimo.Anterior = Ultimo.Anterior.Anterior;
+                Ultimo.Anterior.Siguiente = Ultimo;
+                cantidad--;
+            } else if (cantidad == 1) {
                 Ultimo = null;
                 Primero = null;
+                cantidad--;
             }
-            cantidad--;
         }
 
-        public ListaEnlazadaS MezclaParImpar(ListaEnlazadaS segunda)
-        {
-            ListaEnlazadaS l = new ListaEnlazadaS();
-            NodoS temp = Primero;
+        public ListaEnlazadaS MezclaParImpar(ListaEnlazadaS segunda) {
+            ListaEnlazadaS mezcla = new ListaEnlazadaS();
+            NodoS actual = this.Primero;
 
-            //agrega lista inicial
-            while (temp != null)
-            {
-                NodoS nuevo = new NodoS(temp.Dato);                
-
-                if(l.Primero == null)
-                {
-                    l.Primero = nuevo;
-                    l.Ultimo = nuevo;
-                }
-                else
-                {
-                    l.Ultimo.Siguiente = nuevo;
-                    nuevo.Anterior = Ultimo;
-
-                }
-                l.cantidad++;
-
-                temp = temp.Siguiente;
+            //agrega primera lista
+            while (actual != null) {
+                mezcla.AgregaFin(actual.Dato);
+                actual = actual.Siguiente;
             }
+            //agregar la 2da lista a mezcla
+            actual = mezcla.Primero;
+            NodoS temp = segunda.Primero;
 
-            //agregar dato segunda lista cuando indice es par
-            temp = l.Primero;
-            NodoS temp2 = segunda.Primero;
-            while (temp != null && temp2 != null)
-            {
-                NodoS nuevo = new NodoS(temp2.Dato);
+            while (temp != null && actual != null) {
+                //agrega nodos cuando this > segunda
+                NodoS nuevo = new NodoS(temp.Dato);
 
-                temp2.Anterior = temp;
-                temp2.Siguiente = temp.Siguiente;
-                temp.Siguiente = temp2;
-                
+                nuevo.Siguiente = actual.Siguiente;
+                nuevo.Anterior = actual;
+                actual.Siguiente.Anterior = nuevo;
+                actual.Siguiente = nuevo;
+                mezcla.cantidad++;
+
+                actual = actual.Siguiente.Siguiente;
                 temp = temp.Siguiente;
-                if (temp2.Siguiente != null) temp2 = temp2.Siguiente;
-            }
 
-            return l;
+                //cuando this <= segunda, agrega el resto de nodos de segunda a mezcla
+                if (actual.Siguiente == null) {
+                    while (temp != null) {
+                        mezcla.AgregaFin(temp.Dato); //temp.Dato uses the same Carro, so if you change it, itll change in both
+                        temp = temp.Siguiente;
+                    }
+                    break;
+                }
+            }
+            return mezcla;
         }
 
 
-        public override string ToString()
-        {
+        private void AgregaIni(Carro carro) {
+            NodoS nuevo = new NodoS(carro);
+            if (this.Primero == null) {
+                this.Primero = nuevo;
+                this.Ultimo = nuevo;
+            } else {
+                nuevo.Siguiente = this.Primero;
+                this.Primero.Anterior = nuevo;
+                this.Primero = nuevo;
+            }
+            cantidad++;
+        }
+
+        public void AgregaFin(Carro carro) {
+            NodoS nuevo = new NodoS(carro);
+            if (this.Primero == null) {
+                this.Primero = nuevo;
+                this.Ultimo = nuevo;
+            } else {
+                this.Ultimo.Siguiente = nuevo;
+                nuevo.Anterior = this.Ultimo;
+                this.Ultimo = nuevo;
+            }
+            cantidad++;
+        }
+
+        public override string ToString() {
             string str = "";
             NodoS temp = Primero;
 
-            while (temp != null)
-            {
+            while (temp != null) {
                 str += temp.Dato.ToString() + "\n";
-
                 temp = temp.Siguiente;
             }
 
