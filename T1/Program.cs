@@ -12,27 +12,32 @@ namespace T1
         {
             ListaEnlazadaS listaCar = new ListaEnlazadaS();
 
-            listaCar.AgregaDosCarros("Honda", 2, 300, "BYD", 4, 400);
-            listaCar.AgregaDosCarros("Honda", 2, 200, "BYD", 4, 500);
-            listaCar.AgregaDosCarros("Honda", 2, 100, "BYD", 4, 600);
+            listaCar.AgregaDosCarros("Honda", 2, 100, "BYD", 4, 10);
+            listaCar.AgregaDosCarros("Honda", 2, 10, "BYD", 4, 100);
+            listaCar.AgregaDosCarros("Honda", 2, 100, "BYD", 4, 10);
+            listaCar.AgregaDosCarros("Honda", 2, 10, "BYD", 4, 100);
+            listaCar.AgregaDosCarros("Honda", 2, 100, "BYD", 4, 10);
 
             Console.WriteLine(listaCar.ToString());
 
             ListaEnlazadaS newLista = new ListaEnlazadaS();
-            newLista.AgregaFin(new Carro("text", 5, 1000));
+            newLista.AgregaFin(new Carro("text", 5, 100));
             newLista.AgregaFin(new Carro("text", 5, 2000));
-            newLista.AgregaFin(new Carro("text", 5, 3000));
-            newLista.AgregaFin(new Carro("text", 5, 4000));
-            newLista.AgregaFin(new Carro("text", 5, 5000));
-            newLista.AgregaFin(new Carro("text", 5, 6000));
-            newLista.AgregaFin(new Carro("text", 5, 7000));
-            newLista.AgregaFin(new Carro("text", 5, 7000));
-            newLista.AgregaFin(new Carro("text", 5, 7000));
-            newLista.AgregaFin(new Carro("text", 5, 7000));
+            newLista.AgregaFin(new Carro("text", 5, 100));
+            newLista.AgregaFin(new Carro("text", 5, 2000));
+            newLista.AgregaFin(new Carro("text", 5, 100));
+            newLista.AgregaFin(new Carro("text", 5, 2000));
+            newLista.AgregaFin(new Carro("text", 5, 100));
+            newLista.AgregaFin(new Carro("text", 5, 2000));
+            newLista.AgregaFin(new Carro("text", 5, 100));
+            newLista.AgregaFin(new Carro("text", 5, 2000));
+            newLista.AgregaFin(new Carro("text", 5, 100));
+            newLista.AgregaFin(new Carro("text", 5, 2000));
+
 
             Console.WriteLine(newLista.ToString());
 
-            ListaEnlazadaS mezcla = listaCar.MezclaParImpar(newLista);
+            ListaEnlazadaS mezcla = listaCar.MezclaParImparA(newLista);
             Console.WriteLine(mezcla.ToString());
             Console.WriteLine(mezcla.cantidad);
             Console.WriteLine(newLista.cantidad);

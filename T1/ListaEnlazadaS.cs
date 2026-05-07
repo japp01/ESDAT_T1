@@ -13,7 +13,7 @@ namespace T1 {
 
         public void AgregaDosCarros(string marca1, int puertas1, double ccmotor1,
                                     string marca2, int puertas2, double ccmotor2) {
-            
+
             AgregaIni(new Carro(marca1, puertas1, ccmotor1));
             AgregaFin(new Carro(marca2, puertas2, ccmotor2));
         }
@@ -86,7 +86,115 @@ namespace T1 {
             return mezcla;
         }
 
+        //agregar impares de primera y pares de segunda, intercalados
+        //me equivoque e hice el mismo metodo pero de otra manera, parece mas limpio.
+        public ListaEnlazadaS Mezcla(ListaEnlazadaS segunda) {
+            ListaEnlazadaS mezcla = new ListaEnlazadaS();
+            NodoS temp1 = this.Primero;
+            NodoS temp2 = segunda.Primero;
 
+            //agrega hasta que termine de agregar una lista
+            while (temp1 != null && temp2 != null) {
+                mezcla.AgregaFin(temp1.Dato);
+                temp1 = temp1.Siguiente;
+                mezcla.AgregaFin(temp2.Dato);
+                temp2 = temp2.Siguiente;
+            }
+
+            //Agrega los nodos de la lista faltante
+            if (temp1 == null) {
+                while (temp2 != null) {
+                    mezcla.AgregaFin(temp2.Dato);
+                    temp2 = temp2.Siguiente;
+                }
+            } else if (temp2 == null) {
+                while (temp1 != null) {
+                    mezcla.AgregaFin(temp1.Dato);
+                    temp1 = temp1.Siguiente;
+                }
+            }
+
+            return mezcla;
+        }
+
+        //agregar impares de primera y pares de segunda, intercalados.
+        //esta vez de verdad
+        public ListaEnlazadaS TrueMezcla(ListaEnlazadaS segunda) {
+            ListaEnlazadaS mezcla = new ListaEnlazadaS();
+            NodoS temp1 = this.Primero;
+            NodoS temp2 = segunda.Primero;
+            int pos = 1;
+
+            //agregar hasta terminar una lista
+            while(temp1 != null && temp2 != null){
+                if(pos % 2 > 0) {
+                    mezcla.AgregaFin(temp1.Dato);
+                } else {
+                    mezcla.AgregaFin(temp2.Dato);
+                }
+                temp1 = temp1.Siguiente;
+                temp2 = temp2.Siguiente;
+                pos++;
+            }
+
+            //agregar los pares/impares de la lista remanente
+            if(temp1 != null) { //primera lista
+                while(temp1 != null) {
+                    if(pos % 2 > 0) {//agrega impar
+                        mezcla.AgregaFin(temp1.Dato);
+                    }
+                    temp1 = temp1.Siguiente;
+                    pos++;
+                }
+            } else { //segunda lista
+                while(temp2 != null) { 
+                    if(pos % 2 == 0) { //agrega par
+                        mezcla.AgregaFin(temp2.Dato);
+                    }
+                    temp2 = temp2.Siguiente;
+                    pos++;
+                }
+            }
+
+            return mezcla;
+        }
+
+        public ListaEnlazadaS MezclaParImparA(ListaEnlazadaS segunda) {
+            ListaEnlazadaS res = new ListaEnlazadaS();
+            int pos = 0;
+            NodoS pri = this.Primero;
+            NodoS seg = segunda.Primero;
+            while (pri != null || seg != null) {
+
+                if (pos % 2 > 0 && pri != null) {//impar
+                    res.AgregaFin(new Carro(pri.Dato.Marca, pri.Dato.Puertas, pri.Dato.CcMotor));
+                    //Console.WriteLine(pos + " " + pri.dato);
+                    pri = pri.Siguiente;
+                    if (seg != null) {
+                        seg = seg.Siguiente;
+                    }
+                } else if (pos % 2 > 0 && pri == null) {
+                    if (seg != null) {
+                        seg = seg.Siguiente;
+                    }
+                }
+                if (pos % 2 == 0 && seg != null) {//par
+                    res.AgregaFin(new Carro(seg.Dato.Marca, seg.Dato.Puertas, seg.Dato.CcMotor));
+                    //Console.WriteLine(pos + " " + seg.dato);
+                    seg = seg.Siguiente;
+                    if (pri != null) {
+                        pri = pri.Siguiente;
+                    }
+                } else if (pos % 2 > 0 && seg == null) {
+                    if (pri != null) {
+                        pri = pri.Siguiente;
+                    }
+                }
+                pos++;
+            }
+
+            return res;
+        }
         private void AgregaIni(Carro carro) {
             NodoS nuevo = new NodoS(carro);
             if (this.Primero == null) {
